@@ -29,9 +29,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors({
-  origin: '*',  // Change to your frontend's address 
+  origin: '*', 'https://jobhunt-frontend-two.vercel.app/',// Change to your frontend's address 
   //https://jobhunt-frontend-two.vercel.app/
   // changed http://localhost:5173
+  methods: "GET,POST,PUT,DELETE",
   credentials: true,  // Enable cookies to be sent
 }));
 
